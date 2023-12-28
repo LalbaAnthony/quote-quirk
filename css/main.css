@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 :root {
-  --primary: #4194e2;
+  --primary: #e2a241;
   --dark: #000000;
   --light: #ffffff;
 }
@@ -19,15 +19,6 @@
   box-sizing: border-box;
 }
 
-ul,
-ol {
-  list-style-type: none;
-}
-
-address {
-  font-style: normal;
-}
-
 /* Code for Firefox */
 ::-moz-selection {
   color: var(--light);
@@ -42,4 +33,27 @@ address {
 body {
   background-color: var(--light);
   font-family: "Roboto", sans-serif;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.quote {
+  font-size: 2rem;
+}
+
+.quote::before {
+  content: "❝ ";
+  font-size: 2rem;
+  color: var(--primary);
+}
+.quote::after {
+  content: " ❞";
+  font-size: 2rem;
+  color: var(--primary);
 }
