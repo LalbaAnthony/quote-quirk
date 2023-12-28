@@ -41,10 +41,14 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 0 1rem;
 }
 
 .quote {
   font-size: 2rem;
+  font-weight: 300;
+  color: var(--dark);
+  text-align: center;  
 }
 
 .quote::before {

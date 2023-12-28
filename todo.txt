@@ -1,2 +1,3 @@
 - [ ] Faire le style
 - [ ] Faire un bouton copier
+- [X] Ajout le support de plusieurs verb/cob

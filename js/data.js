@@ -98,7 +98,8 @@ const sentences = [
     "Le :cod de la simplicité :verb des trésors dans la modestie.",
     "La :cod du savoir-servir :verb les chemins de la générosité.",
     "La :cod du discernement :verb les couleurs de la vérité.",
-    "Chaque étoile est un :cod qui :verb la voie dans l\'obscurité."
+    "Chaque étoile est un :cod qui :verb la voie dans l\'obscurité.",
+    "La :cod du savoir-vivre :verb les portes de l\'harmonie sociale.",
 ];
 
 const cods = [
