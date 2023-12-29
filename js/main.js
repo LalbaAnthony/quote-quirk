@@ -1,9 +1,10 @@
-function returnRandomNumber(min = 0, max = 100) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+function ucFirst(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function returnRandomSentence() {
-    return sentences[Math.floor(Math.random() * sentences.length)];
+
+function returnRandomTemplate() {
+    return templates[Math.floor(Math.random() * templates.length)];
 }
 
 function returnRandomCod() {
@@ -16,14 +17,38 @@ function returnRandomVerb() {
 
 function generateQuote() {
 
-    let sentence = returnRandomSentence();
+    let template = returnRandomTemplate();
+    console.log(template);
 
-    while (sentence.includes(":cod")) {
-        sentence = sentence.replace(":cod", returnRandomCod());
-    }
-    while (sentence.includes(":verb")) {
-        sentence = sentence.replace(":verb", returnRandomVerb());
+    // COD
+    while (template.includes(":cod")) {
+
+        let newCod = returnRandomCod();
+
+        if (template.includes(":cod_det")) {
+            template = template.replace(":cod_det", `${newCod.det} ${newCod.mot}`);
+        } else {
+            template = template.replace(":cod", newCod.mot);
+        }
+
+        console.log('COD utilisé: ', newCod.mot);
     }
 
-    return sentence;
+    // VERBS
+    while (template.includes(":verb")) {
+
+        let newVerb = returnRandomVerb();
+
+        if (template.includes(":verb_present_il_elle")) {
+            template = template.replace(":verb_present_il_elle", newVerb.conjugaisons.present.il_elle);
+        } else if (template.includes(":verb_det")) {
+            template = template.replace(":verb_det", `${newVerb.det} ${newVerb.infinitif}`);
+        } else {
+            template = template.replace(":verb", newVerb.infinitif);
+        }
+
+        console.log('Verbe utilisé: ', newVerb.infinitif);
+    }
+
+    return `${ucFirst(template)}.`;
 }

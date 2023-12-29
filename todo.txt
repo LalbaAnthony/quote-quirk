@@ -1,3 +1,6 @@
 - [ ] Faire le style
+- [ ] Nourrir données avec API ?
+- [ ] Fixer les "l' argent"
 - [ ] Faire un bouton copier
+- [ ] Faire un bouton lock qui enregistre dans localstorage
 - [X] Ajout le support de plusieurs verb/cob
