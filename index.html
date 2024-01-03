@@ -56,6 +56,6 @@
 
     document.getElementById('copy').addEventListener('click', function () {
         navigator.clipboard.writeText(`"${document.getElementById('quote').innerHTML}"`);
-        notify('Citation copiée !');
+        notify('Citation copiée !', 'success');
     });
 </script>

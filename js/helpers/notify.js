@@ -30,9 +30,9 @@ function notify(content, type = 'success', autoclose = true) {
       right: 20px;
       max-width: 200px;
       z-index: ${NOTIFICATION_CONFIG.containerZIndex};
-      padding: 10px;
+      padding: 0.5rem 1rem;
       flex: 1;
-      border-radius: 0.5rem;
+      border-radius: 25px;
       box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
       transition: opacity 0.5s;
       color: var(--light);
