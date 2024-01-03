@@ -1,5 +1,4 @@
 const oldSentences = [
-    // "Les erreurs sont des :cod qui nous aident à :verb.",
     // "L\'éducation est le fondement de tout :cod :verb.",
     // "Chaque jour est une chance de :verb son :cod.",
     // "La persévérance est la clé pour :verb tout :cod.",
@@ -39,7 +38,6 @@ const oldSentences = [
     // "La :cod du courage :verb les frontières de l\'impossible.",
     // "La curiosité est le :cod de la découverte qui :verb l\'esprit.",
     // "Le :cod du silence :verb des messages plus forts que les mots.",
-    // "La :cod est la clé qui ouvre la porte de la :verb éternelle.",
     // "Chaque rire est une note de musique dans la symphonie du :cod.",
     // "L\'amélioration continue est le :cod qui :verb vers l\'excellence.",
     // "La :cod est la force invisible qui :verb à travers l\'adversité.",
@@ -58,7 +56,7 @@ const oldSentences = [
     // "La :cod du bonheur :verb des éclats de lumière dans l\'obscurité.",
     // "Le :cod du talent :verb des horizons infinis d\'expression.",
     // "La :cod du discernement :verb les chemins de la sagesse.",
-    // "Chaque émotion est un :cod qui :verb l\'expérience humaine.",
+    // "Chaque émotion qui :verb l\' est un :unPl :codexpérience humaisn, codSgexpérience humaine.",
     // "La :cod du partage :verb des liens indissolubles entre les âmes.",
     // "Le :cod du succès :verb des marches vers l\'accomplissement.",
     // "La :cod du mystère :verb des intrigues dans le livre de la vie.",
@@ -66,7 +64,7 @@ const oldSentences = [
     // "La :cod du pardon :verb les cicatrices de l\'âme.",
     // "La :cod du savoir-vivre :verb les portes de l\'harmonie sociale.",
     // "Chaque pas est une avancée vers le :cod de soi.",
-    // "Le :cod de la motivation :verb des feux ardents de la réalisation.",
+    // "Le :cod de la motivation ardents de la réalisation :verb verPlb des feux.s", desSg feux.",
     // "La :cod du discernement :verb les ombres de l\'incertitude.",
     // "La :cod du savoir-être :verb les nuances de la personnalité.",
     // "Chaque moment de paix est un :cod qui :verb l\'âme.",
@@ -93,33 +91,33 @@ const oldSentences = [
     // "La :cod du discernement :verb les couleurs de la vérité.",
     // "Chaque étoile est un :cod qui :verb la voie dans l\'obscurité.",
     // "La :cod du savoir-vivre :verb les portes de l\'harmonie sociale.",
+    // ":cod_det sont des :cod_det qui nous aident à :verb.",
 ];
 
 const templates = [
     ":cod_det est :cod_det de chaque instants",
-    "Chaque :cod est une occasion :verb :cod_det plus fort",
-    ":cod est :cod qui :verb sans explication",
+    "Chaque :cod est une occasion :verb_det :cod_det plus fort",
+    ":cod est :cod_det qui :verb sans explication",
     "Chaque défi est une opportunité :verb_det :cod_det",
     "La patience est la clé pour :verb :cod_det",
 ];
 
 const cods = [
-    { mot: "arc-en-ciel", genre: "m", det: "l\'" },
-    { mot: "bonheur", genre: "m", det: "le" },
-    { mot: "changement", genre: "m", det: "le" },
-    { mot: "coeur", genre: "m", det: "le" },
-    { mot: "courage", genre: "m", det: "le" },
-    { mot: "défi", genre: "m", det: "le" },
-    { mot: "dévouement", genre: "m", det: "le" },
-    { mot: "discernement", genre: "m", det: "le" },
-    { mot: "énergie", genre: "f", det: "l\'" },
-    { mot: "épreuve", genre: "f", det: "l\'" },
+    { genre: "m", mot_sing: "bonheur", mot_plu: "bonheurs", det_sing: "le ", det_plu: "les" },
+    { genre: "m", mot_sing: "changement", mot_plu: "changements", det_sing: "le ", det_plu: "les" },
+    { genre: "m", mot_sing: "coeur", mot_plu: "coeurs", det_sing: "le ", det_plu: "les" },
+    { genre: "m", mot_sing: "courage", mot_plu: "courages", det_sing: "le ", det_plu: "les" },
+    { genre: "m", mot_sing: "défi", mot_plu: "défis", det_sing: "le ", det_plu: "les" },
+    { genre: "m", mot_sing: "dévouement", mot_plu: "dévouements", det_sing: "le ", det_plu: "les" },
+    { genre: "m", mot_sing: "discernement", mot_plu: "discernements", det_sing: "le ", det_plu: "les" },
+    { genre: "f", mot_sing: "énergie", mot_plu: "énergies", det_sing: "l\'", det_plu: "les" },
+    { genre: "f", mot_sing: "épreuve", mot_plu: "épreuves", det_sing: "l\'", det_plu: "les" },
 ];
 
 const verbs = [
     {
         infinitif: "abandonner",
-        det: "d'",
+        det: "d\'",
         conjugaisons: {
             present: {
                 je: "abandonne",
@@ -135,7 +133,7 @@ const verbs = [
     },
     {
         infinitif: "accepter",
-        det: "d'",
+        det: "d\'",
         conjugaisons: {
             present: {
                 je: "accepte",
