@@ -11,6 +11,7 @@
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Kanit:wght@400;700" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/helpers/notify.js"></script>
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
 </head>
@@ -24,7 +25,19 @@
         <div class="center">
             <q id="quote" class="quote"></q>
             <div class="toolbar">
-                <button>
+                <button id="lock">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1" />
+                    </svg> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2M3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1z" />
+                    </svg>
+                </button>
+                <button id="copy">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -40,4 +53,9 @@
 
 <script>
     document.getElementById('quote').innerHTML = generateQuote();
+
+    document.getElementById('copy').addEventListener('click', function () {
+        navigator.clipboard.writeText(`"${document.getElementById('quote').innerHTML}"`);
+        notify('Citation copiée !');
+    });
 </script>

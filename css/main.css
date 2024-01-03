@@ -71,10 +71,18 @@ div.toolbar {
 }
 
 .toolbar>button {
+  background-color: var(--light);
+  border: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
 .toolbar>button:hover {
   transform: scale(1.1);
+}
+
+.toolbar svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--primary);
 }
