@@ -61,3 +61,20 @@ body {
   font-size: 2rem;
   color: var(--primary);
 }
+
+div.toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.toolbar>button {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.toolbar>button:hover {
+  transform: scale(1.1);
+}
