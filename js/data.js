@@ -96,8 +96,8 @@ const oldSentences = [
 
 const templates = [
     ":cod_det est :cod_det de chaque instants",
-    "Chaque :cod est une occasion :verb_det :cod_det plus fort",
-    ":cod est :cod_det qui :verb sans explication",
+    "Chaque :cod est une occasion :verb_det",
+    ":cod_det est :cod_det qui :verb_present_il_elle sans explication",
     "Chaque défi est une opportunité :verb_det :cod_det",
     "La patience est la clé pour :verb :cod_det",
 ];
