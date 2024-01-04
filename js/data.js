@@ -8,7 +8,7 @@ const templates = [
     "Chaque jour est une chance :verb_det :cod_det",
     ":cod_det est un trésor qui ne perd jamais de :cod",
     ":cod_det est le pouvoir :verb_det son :cod",
-    // "La confiance est la base d\'une relation solide entre :cod et :cod",
+    ":cod_det est la base d\'une relation solide entre :cod et :cod",
     // "La sagesse consiste à :verb le :cod avec discernement",
     // "Le bonheur réside dans la capacité de :verb chaque petit :cod",
     // "Le courage est la force de :verb malgré :cod",
